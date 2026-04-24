@@ -433,6 +433,53 @@
     0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,.5); }
     50% { box-shadow: 0 6px 36px rgba(37,211,102,.8); }
   }
+  /* ── AJUSTES PARA MOBILE (Telas até 768px) ── */
+@media (max-width: 768px) {
+  
+  /* Ajuste na Navegação */
+  nav {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .nav-links {
+    display: none; /* Esconde o menu de texto no mobile (ou use um menu hamburguer) */
+  }
+
+  /* Ajuste no Hero (A parte principal) */
+  .hero {
+    flex-direction: column; /* Coloca um em cima do outro */
+    padding: 40px 20px;
+    text-align: center;
+    gap: 30px;
+  }
+  .hero::before { width: 100%; } /* Fundo ocupa tudo */
+
+  .hero-logo-block { align-items: center; } /* Centraliza logo */
+  .hero-h1 { font-size: 36px; } /* Diminui o título */
+  .hero-sub { margin: 0 auto 24px; }
+  .hero-btns { justify-content: center; }
+
+  .soundwave { justify-content: center; }
+
+  /* Ajuste nos Serviços */
+  section { padding: 50px 20px; }
+  
+  .services-grid {
+    grid-template-columns: 1fr; /* Deixa os cards em uma única coluna */
+    gap: 16px;
+  }
+
+  h2.section-title { font-size: 28px; }
+}
+
+/* Ajustes extras para celulares muito pequenos (iPhone SE, etc) */
+@media (max-width: 480px) {
+  .hero-h1 { font-size: 28px; }
+  .btn-primary, .btn-outline { width: 100%; justify-content: center; } /* Botões largura total */
+}
+
 </style>
 </head>
 <body>
@@ -440,11 +487,9 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <div class="logo-icon">W</div>
-    <div class="logo-text">
-      <span class="brand">W&D STUDIO</span>
-      <span class="sub">— Design —</span>
-    </div>
+    <div class="logo-icon">
+  <img src="logo.jpeg" alt="W&D Studio Logo" style="height:46px; width:auto;">
+</div>
   </div>
   <ul class="nav-links">
     <li><a href="#">Serviços</a></li>
@@ -460,9 +505,7 @@
 <div class="hero">
   <div class="hero-left">
     <div class="hero-logo-block">
-      <div class="hero-logo-big">W</div>
-      <span class="hero-brand-name">W&D STUDIO</span>
-      <span class="hero-brand-sub">— Design —</span>
+     <img src="logo.jpeg" alt="W&D Studio Logo" style="max-width: 300px; width:100%; height:auto;">
     </div>
     <div class="soundwave">
       <span></span><span></span><span></span><span></span><span></span>
