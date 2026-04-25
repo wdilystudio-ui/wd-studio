@@ -181,10 +181,34 @@
           <div class="equalizer" aria-hidden="true">
             <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
-          <a class="play-button" href="audio1.mp3" aria-label="Reproduzir áudio">▶</a>
-          <p class="mockup-caption">“Vote em [Seu Nome]. A voz do povo!”</p>
-          <div class="stats-grid">
-            <div>
+  <button class="play-button" id="playBtn" aria-label="Reproduzir áudio">▶</button>
+  <p class="mockup-caption">"Vote em [Seu Nome]. A voz do povo!"</p>
+  <div class="stats-grid">
+    <div>
+      <!-- seu conteúdo aqui -->
+    </div>
+  </div>
+</aside>
+
+<script>
+  const playBtn = document.getElementById('playBtn');
+  const audio = new Audio('audio/audio1.mp3'); // Caminho para o arquivo na pasta audio
+
+  playBtn.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = '⏸'; // Muda para ícone de pausa
+    } else {
+      audio.pause();
+      playBtn.textContent = '▶'; // Volta para ícone de play
+    }
+  });
+
+  // Volta ao ícone de play quando o áudio termina
+  audio.addEventListener('ended', function() {
+    playBtn.textContent = '▶';
+  });
+</script>
               <strong>50+</strong>
               <span>Áudios criados</span>
             </div>
