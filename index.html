@@ -189,27 +189,7 @@
     </div>
   </div>
 </aside>
-
-<script>
-  const playBtn = document.getElementById('playBtn');
-  const audio = new Audio('audio/audio1.mp3'); // Caminho para o arquivo na pasta audio
-
-  playBtn.addEventListener('click', function() {
-    if (audio.paused) {
-      audio.play();
-      playBtn.textContent = '⏸'; // Muda para ícone de pausa
-    } else {
-      audio.pause();
-      playBtn.textContent = '▶'; // Volta para ícone de play
-    }
-  });
-
-  // Volta ao ícone de play quando o áudio termina
-  audio.addEventListener('ended', function() {
-    playBtn.textContent = '▶';
-  });
-</script>
-              <strong>50+</strong>
+   <strong>50+</strong>
               <span>Áudios criados</span>
             </div>
             <div>
@@ -391,6 +371,25 @@
       });
     });
   </script>
+  <script>
+  const playBtn = document.getElementById('playBtn');
+  const audio = new Audio('audio/audio1.mp3'); // Caminho para o arquivo na pasta audio
+
+  playBtn.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = '⏸'; // Muda para ícone de pausa
+    } else {
+      audio.pause();
+      playBtn.textContent = '▶'; // Volta para ícone de play
+    }
+  });
+
+  // Volta ao ícone de play quando o áudio termina
+  audio.addEventListener('ended', function() {
+    playBtn.textContent = '▶';
+  });
+</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
