@@ -272,6 +272,20 @@ img {
   height: 100%;
   object-fit: contain;
 }
+.hero-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
 
 .hero-brand h1 {
   margin: 12px 0 8px;
